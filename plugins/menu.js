@@ -167,7 +167,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, isPrems, args, usedPr
 						rows: [
 							{title: '⚡ PREMIUM', rowId: usedPrefix + 'sewa', description: 'Premium, Sewabot, Jadibot, Jasa Run Bot'},
 							{title: '🎫 OWNER', rowId: usedPrefix + 'owner', description: 'Chat P tidak dibalas'},
-							{title: '📁 Source Code', rowId: usedPrefix + 'sc', description: 'Original Base'}
+							
 						]
 					}, {
 						title: `━ ━ ━ ━ 『 SUB MENU 』 ━ ━ ━ ━`,
