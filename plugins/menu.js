@@ -154,7 +154,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, isPrems, args, usedPr
 		text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 		const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
 		if (meh2 == 1) {
-			conn.sendHydrated(m.chat, text.trim(), packname + ' - ' + author, nais, 'https://cutt.ly/azamilaifuu', 'Minimalist ツ Sweet', null, null, [
+			conn.sendHydrated(m.chat, text.trim(), packname + ' - ' + author, nais, 'https://chat.whatsapp.com/ByhYR5yoAW274BNlkBs64d', 'iBeng-BOTZZ', null, null, [
 				['Premium', '.premium'],
 				['Contact', '.owner'],
 				['⦿ ALL MENU ⦿', '.menuall']
