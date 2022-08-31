@@ -1,14 +1,15 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, usedPrefix, command }) => {
-    let res = await fetch(`https://api.waifu.pics/sfw/${command}`)
-    if (!res.ok) throw 'Fitur Error!'
-    let json = await res.json()
-    if (!json.url) throw 'Error!'
-    conn.sendButton(m.chat, `_Random pic : ${command}_`, packname + ' - ' + author, json.url, [[`⧑ next ${command} ⧑`, `${usedPrefix + command}`]], m)
+let handler = async (m, { conn }) => {
+	let ne = await (await fetch('https://raw.githubusercontent.com/ArugaZ/grabbed-results/main/random/anime/neko.txt')).text()
+    let nek = ne.split('\n')
+    let neko = pickRandom(nek)
+	conn.sendButton(m.chat, 'Nyaww~ 🐾💗', wm, neko, [['Next','.neko']],m)
 }
-handler.menuanime = ['neko']
-handler.tagsanime = ['randompic']
 handler.command = /^(neko)$/i
-
+handler.tags = ['anime']
+handler.help = ['neko']
 export default handler
+function pickRandom(list) {
+  return list[Math.floor(Math.random() * list.length)]
+}
