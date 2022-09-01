@@ -26,20 +26,20 @@
 		"MD",
 		"baileys-md"
 	],
-	"homepage": "https://github.com/clicknetcafe/azamibot-md",
+	"homepage": "https://github.com/BochilGaming/games-wabot",
 	"author": {
 		"name": "BochilGaming"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/clicknetcafe/azamibot-md.git"
+		"url": "git+https://github.com/BochilGaming/games-wabot.git"
 	},
 	"bugs": {
-		"url": "https://github.com/clicknetcafe/azamibot-md/issues"
+		"url": "https://github.com/BochilGaming/games-wabot/issues"
 	},
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
-		"@adiwajshing/baileys": "^4.4.0",
+		"@adiwajshing/baileys": "github:adiwajshing/baileys",
 		"@bochilteam/scraper": "^3.0.0",
 		"@ibaraki-douji/pixivts": "^2.0.2",
 		"@shineiichijo/nhentai-ts": "^0.0.2",
