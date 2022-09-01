@@ -1,4 +1,4 @@
-console.log('Starting...')
+console.log('🐾 Starting...')
 
 import { join, dirname } from 'path'
 import { createRequire } from "module";
@@ -16,15 +16,15 @@ const { name, author } = require(join(__dirname, './package.json')) // https://w
 const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
-say('BunnyWalker\nWhatsApp Bot', {
-  font: 'chrome',
+say('KANNABOT\nMD', {
+  font: 'block',
   align: 'center',
-  gradient: ['red', 'magenta']
+  colors: ['blue']
 })
-say(`'${name}' By @${author.name || author}`, {
+say(`🐾 RPG BOT Multi-Device Whatsapp By @${global.nameown}`, {
   font: 'console',
   align: 'center',
-  gradient: ['red', 'magenta']
+  colors: ['green']
 })
 
 var isRunning = false
@@ -39,7 +39,22 @@ function start(file) {
   say([process.argv[0], ...args].join(' '), {
     font: 'console',
     align: 'center',
-    gradient: ['red', 'magenta']
+    colors: ['magenta']
+  })
+  say('🌎 MEMUAT SOURCE...', {
+    font: 'console',
+    align: 'center',
+    colors: ['green']
+  })
+  say('📑 MEMUAT PLUGINS...', {
+    font: 'console',
+    align: 'center',
+    colors: ['green']
+  })
+  say('✅ DONE !', {
+    font: 'console',
+    align: 'center',
+    colors: ['green']
   })
   setupMaster({
     exec: args[0],
@@ -61,7 +76,7 @@ function start(file) {
   })
   p.on('exit', (_, code) => {
     isRunning = false
-    console.error('Exited with code:', code)
+    console.error('[❗] Exited with code:', code)
     if (code === 0) return
     watchFile(args[0], () => {
       unwatchFile(args[0])
